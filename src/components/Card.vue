@@ -1,8 +1,9 @@
 <template>
     <div>
         <h2>{{ cardWords }}</h2>
-        <p>This is my car !</p>
+        <p>{{ msg }}</p>
         <button @click="resetMyCar()">Change my Car !</button>
+        <button @click="changeMsg()">Change message</button>
     </div>
 </template>
 <script>
@@ -12,6 +13,11 @@ export default {
             type: String,
             default: null,
         },
+        msg: {
+            type: String,
+            default: null,
+        },
+        changeMsg: Function
     },
     methods: {
         resetMyCar(){
